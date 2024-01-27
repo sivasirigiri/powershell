@@ -7,6 +7,7 @@ Get-Content "CloneAllRepos.config" | foreach-object -begin {$h=@{}} -process {
         $h.Add($k[0], $k[1]) 
     } 
 }
+#get username & password
 $url = $h.Get_Item("Url")
 $username = $h.Get_Item("Username")
 $password = $h.Get_Item("Password")
